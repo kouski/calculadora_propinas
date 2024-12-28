@@ -1,4 +1,4 @@
-
+import {menuItems} from './data/db';
 
 
 function App() {
@@ -6,7 +6,9 @@ function App() {
 
   return (
     <>
-      <h1>Calculadora</h1>
+      <header className=" bg-teal-400 py-5 ">
+        <h1 className=" text-center text-2xl font-black">Calculadora de propinas</h1>
+      </header>
       
     </>
   )

@@ -1,11 +1,12 @@
 import {menuItems} from './data/db';
 import MenuItem from './components/MenuItem';
 import useOrder from './hooks/useOrder';
+import OrderContent from './components/OrderContent';
 
 
 function App() {
   
-  const { addItem} = useOrder()
+  const { order, addItem } = useOrder()
 
   return (
     <>
@@ -26,8 +27,11 @@ function App() {
           ))}
         </div>
         
-        <div>
-          <h2 className=' text-2xl font-black mb-6'>Consumo</h2>
+        <div className=' border border-dashed border-slate-500 p-5 ml-10 rounded-lg space-y-10'>
+          
+          <OrderContent 
+          order={order}
+          />
           
         </div>
         
